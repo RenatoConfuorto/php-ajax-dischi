@@ -18,6 +18,12 @@
 
 <body>
   <div id="root">
+    <div class="filter-container">
+      <select name="filter" id="filter" @change="changeFilterKey">
+        <option v-for="genre in genres" :value="genre.toLowerCase()">{{ genre }}</option>
+      </select>
+    </div>
+
     <div class="card-container" v-for="element in albums">
       <div class="ms_card-container">
         <div class="ms_card">
